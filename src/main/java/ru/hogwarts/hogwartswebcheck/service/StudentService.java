@@ -1,9 +1,7 @@
 package ru.hogwarts.hogwartswebcheck.service;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+
 import org.springframework.stereotype.Service;
 import ru.hogwarts.hogwartswebcheck.api.IStudent;
-import ru.hogwarts.hogwartswebcheck.model.Avatar;
 import ru.hogwarts.hogwartswebcheck.model.Student;
 import ru.hogwarts.hogwartswebcheck.repository.AvatarRepository;
 import ru.hogwarts.hogwartswebcheck.repository.StudentRepository;
@@ -13,8 +11,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Service
-public class StudentService implements IStudent{
-
+public class StudentService implements IStudent {
 
     private final StudentRepository studentRepository;
     private final AvatarRepository avatarRepository;

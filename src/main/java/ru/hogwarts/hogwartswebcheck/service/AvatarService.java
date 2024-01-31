@@ -1,4 +1,5 @@
 package ru.hogwarts.hogwartswebcheck.service;
+
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -7,6 +8,7 @@ import ru.hogwarts.hogwartswebcheck.api.IAvatar;
 import ru.hogwarts.hogwartswebcheck.model.Avatar;
 import ru.hogwarts.hogwartswebcheck.model.Student;
 import ru.hogwarts.hogwartswebcheck.repository.AvatarRepository;
+import ru.hogwarts.hogwartswebcheck.repository.StudentRepository;
 
 import javax.imageio.ImageIO;
 
@@ -17,30 +19,25 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Objects;
 
 @Service
 @Transactional
 public class AvatarService implements IAvatar {
-
-    private final StudentService studentService;
     private final AvatarRepository avatarRepository;
+    private final StudentRepository studentRepository;
+
     @Value("${path.to.avatars.folder}")
-    private String avatarDir;
+    private String avatarsDir;
 
-
-
-    public AvatarService(StudentService studentService, AvatarRepository avatarRepository) {
-        this.studentService = studentService;
+    public AvatarService(AvatarRepository avatarRepository, StudentRepository studentRepository) {
         this.avatarRepository = avatarRepository;
+        this.studentRepository = studentRepository;
     }
 
-
     public void uploadAvatar(Long studentId, MultipartFile avatarFile) throws IOException {
-        Student student = studentService.findStudent(studentId);
+        Student student = studentRepository.getById(studentId);
 
-//        Path filePath = Path.of(avatarDir, studentId + "." + getExtensions(Objects.requireNonNull(avatarFile.getOriginalFilename())));
-        Path filePath = Path.of(avatarDir, studentId + "." + getExtensions(avatarFile.getOriginalFilename()));
+        Path filePath = Path.of(avatarsDir, student + "." + getExtensions(avatarFile.getOriginalFilename()));
         Files.createDirectories(filePath.getParent());
         Files.deleteIfExists(filePath);
         try (
@@ -64,16 +61,13 @@ public class AvatarService implements IAvatar {
         avatarRepository.save(avatar);
     }
 
-
     private String getExtensions(String fileName) {
         return fileName.substring(fileName.lastIndexOf(".") + 1);
     }
 
-
-    public Avatar findAvatar(Long avatarId) {
-        return avatarRepository.findByStudentId(avatarId).orElse(new Avatar());
+    public Avatar findAvatar(Long studentId) {
+        return avatarRepository.findByStudentId(studentId).orElse(new Avatar());
     }
-
 
     public void delete(Long id) {
         avatarRepository.deleteById(id);

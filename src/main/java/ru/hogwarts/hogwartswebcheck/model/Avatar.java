@@ -11,18 +11,16 @@ public class Avatar {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column
     private String filePath;
-    @Column
     private long fileSize;
-    @Column
     private String mediaType;
 
     @Lob
     private byte[] data;
 
     @OneToOne
-    @JoinColumn(name = "id")
+//    @MapsId
+//    @JoinColumn(name = "id")
     private Student student;
 
 

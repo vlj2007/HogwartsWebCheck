@@ -1,4 +1,5 @@
 package ru.hogwarts.hogwartswebcheck.service;
+
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.hogwarts.hogwartswebcheck.api.IFaculty;
@@ -8,12 +9,12 @@ import ru.hogwarts.hogwartswebcheck.exception.BadRequestException;
 
 import java.util.Collection;
 import java.util.List;
+
 @Service
 public class FacultyService implements IFaculty {
 
     @Autowired
     private final FacultyRepository facultyRepository;
-
 
     public FacultyService(FacultyRepository facultyRepository) {
         this.facultyRepository = facultyRepository;
