@@ -17,19 +17,17 @@
 
 Создать класс для тестирования в пакете test. Создать по одному тесту на каждый эндпоинт контроллера StudentController, используя TestRestTemplate.
 
-<aside>
-<img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b3ece0ea-b544-4e72-9f11-12866926f3df/Рисунок41.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b3ece0ea-b544-4e72-9f11-12866926f3df/Рисунок41.png" width="40px" /> **Критерии оценки:** В пакете test создан класс для тестирования StudentController. Для тестирования использовался TestRestTemplate. Для каждого эндпоинта контроллера StudentController создан как минимум один тест.
+**Критерии оценки:** В пакете test создан класс для тестирования StudentController. Для тестирования использовался TestRestTemplate. Для каждого эндпоинта контроллера StudentController создан как минимум один тест.
 
-</aside>
+
 
 **Шаг 2**
 
 Создать еще один класс для тестирования в пакете test. Создать по одному тесту на каждый эндпоинт контроллера FacultyController, используя TestRestTemplate.
 
-<aside>
-<img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fdffee5c-f806-474f-ba68-202b9a3cd117/Рисунок41.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fdffee5c-f806-474f-ba68-202b9a3cd117/Рисунок41.png" width="40px" /> **Критерии оценки:** В пакете test создан класс для тестирования FacultyController. Для тестирования использовался TestRestTemplate. Для каждого эндпоинта контроллера FacultyController создан как минимум один тест.
+**Критерии оценки:** В пакете test создан класс для тестирования FacultyController. Для тестирования использовался TestRestTemplate. Для каждого эндпоинта контроллера FacultyController создан как минимум один тест.
 
-</aside>
+
 
 ## Задание 2
 
@@ -37,16 +35,11 @@
 
 Создать класс для тестирования в пакете test. Создать по одному тесту на каждый эндпоинт контроллера StudentController, используя WebMvcTest.
 
-<aside>
-<img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b3ece0ea-b544-4e72-9f11-12866926f3df/Рисунок41.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b3ece0ea-b544-4e72-9f11-12866926f3df/Рисунок41.png" width="40px" /> **Критерии оценки:** В пакете test создан класс для тестирования StudentController. Для тестирования использовался WebMvcTest. Для каждого эндпоинта контроллера StudentController создан как минимум один тест.
+**Критерии оценки:** В пакете test создан класс для тестирования StudentController. Для тестирования использовался WebMvcTest. Для каждого эндпоинта контроллера StudentController создан как минимум один тест.
 
-</aside>
 
 **Шаг 2**
 
 Создать еще один класс для тестирования в пакете test. Создать по одному тесту на каждый эндпоинт контроллера FacultyController, используя WebMvcTest.
 
-<aside>
-<img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fdffee5c-f806-474f-ba68-202b9a3cd117/Рисунок41.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fdffee5c-f806-474f-ba68-202b9a3cd117/Рисунок41.png" width="40px" /> **Критерии оценки:** В пакете test создан класс для тестирования FacultyController. Для тестирования использовался WebMvcTest. Для каждого эндпоинта контроллера FacultyController создан как минимум один тест.
-
-</aside>
+**Критерии оценки:** В пакете test создан класс для тестирования FacultyController. Для тестирования использовался WebMvcTest. Для каждого эндпоинта контроллера FacultyController создан как минимум один тест.
