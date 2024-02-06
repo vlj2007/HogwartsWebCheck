@@ -21,10 +21,6 @@ public class Faculty {
     @OneToMany(mappedBy = "faculty")
     private Set<Student> students;
 
-    public Set<Student> getStudentSet() {
-        return students;
-    }
-
     public Faculty() {
     }
 
