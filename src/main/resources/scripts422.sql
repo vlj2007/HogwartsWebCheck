@@ -1,0 +1,20 @@
+CREATE DATABASE transport;
+
+CREATE TABLE car
+(
+    id BIGINT,
+    mark CHARACTER VARYING(255),
+    cost NUMERIC(12,2),
+    model CHARACTER VARYING(255),
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE person
+(
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    name CHARACTER VARYING(255),
+    age INTEGER,
+    driver_licence BOOLEAN NOT NULL,
+    car_id INT NOT NULL,
+    CONSTRAINT id FOREIGN KEY(id) REFERENCES car(id)
+);
