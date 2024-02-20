@@ -20,7 +20,7 @@ public interface IFaculty {
 
     Collection<Faculty> findFacultyByColorIgnoreCase(String color);
 
-    public void deleteAllFaculty(long id);
+    public void deleteFacultyById(long id);
 
     public void deleteAllFaculty(Faculty faculty);
 }

@@ -11,7 +11,7 @@ public class Faculty {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     @Column
     private String name;
     @Column
@@ -24,10 +24,22 @@ public class Faculty {
     public Faculty() {
     }
 
-    public Faculty(long id, String name, String color) {
+    public Faculty(Long id, String name, String color) {
         this.id = id;
         this.name = name;
         this.color = color;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Set<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(Set<Student> students) {
+        this.students = students;
     }
 
     public long getId() {
